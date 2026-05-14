@@ -7,6 +7,7 @@ Home Assistant custom integration for controlling BenQ projectors through the `i
 - Config flow setup from the UI
 - Media player entity for projector-style controls
 - Button entities for direct IR actions
+- Power On/Off buttons enabled by default; additional buttons are created disabled by default and can be enabled in the entity registry
 - Uses `infrared-protocols` command definitions
 
 ## Installation with HACS
