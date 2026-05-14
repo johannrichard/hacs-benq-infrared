@@ -28,12 +28,24 @@ def test_manifest_required_keys() -> None:
     assert not missing, f"manifest.json missing keys: {missing}"
 
 
-def test_manifest_domain_matches_hacs() -> None:
-    """The integration domain should match across manifest and hacs.json."""
-    manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
+def test_hacs_manifest_schema() -> None:
+    """hacs.json should only contain supported keys for integrations."""
     hacs = json.loads(HACS.read_text(encoding="utf-8"))
 
-    assert manifest["domain"] in hacs["domains"]
+    allowed = {
+        "name",
+        "content_in_root",
+        "zip_release",
+        "filename",
+        "hide_default_branch",
+        "country",
+        "homeassistant",
+        "hacs",
+        "persistent_directory",
+    }
+    unknown = sorted(set(hacs) - allowed)
+    assert not unknown, f"hacs.json has unsupported keys: {unknown}"
+    assert "name" in hacs
 
 
 def test_manifest_version_is_semver_like() -> None:
