@@ -1,0 +1,53 @@
+{
+  "config": {
+    "abort": {
+      "already_configured": "This BenQ device has already been configured with this transmitter.",
+      "no_emitters": "No infrared transmitter entities found. Please set up an infrared device first."
+    },
+    "step": {
+      "user": {
+        "title": "Set up BenQ IR Remote",
+        "description": "Select the infrared transmitter entity to use for controlling your BenQ projector.",
+        "data": {
+          "device_type": "Device type",
+          "infrared_entity_id": "Infrared transmitter"
+        },
+        "data_description": {
+          "device_type": "The type of BenQ device to control.",
+          "infrared_entity_id": "The infrared transmitter entity to use for sending commands."
+        }
+      }
+    }
+  },
+  "entity": {
+    "button": {
+      "power_on":     { "name": "Power On" },
+      "power_off":    { "name": "Power Off" },
+      "power_toggle": { "name": "Power Toggle" },
+      "menu":         { "name": "Menu" },
+      "up":           { "name": "Up" },
+      "down":         { "name": "Down" },
+      "left":         { "name": "Left" },
+      "right":        { "name": "Right" },
+      "ok":           { "name": "OK" },
+      "hdmi_1":       { "name": "HDMI 1" },
+      "hdmi_2":       { "name": "HDMI 2" },
+      "vga":          { "name": "VGA" },
+      "component":    { "name": "Component" },
+      "video":        { "name": "Video" },
+      "auto":         { "name": "Auto" },
+      "eco_blank":    { "name": "Eco Blank" },
+      "aspect_ratio": { "name": "Aspect Ratio" },
+      "mute":         { "name": "Mute" },
+      "volume_up":    { "name": "Volume Up" },
+      "volume_down":  { "name": "Volume Down" }
+    }
+  },
+  "selector": {
+    "device_type": {
+      "options": {
+        "projector": "Projector"
+      }
+    }
+  }
+}

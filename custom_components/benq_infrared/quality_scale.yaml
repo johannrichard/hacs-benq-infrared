@@ -1,0 +1,38 @@
+rules:
+  action-setup:
+    status: exempt
+    comment: This integration does not provide additional actions.
+  appropriate-polling:
+    status: exempt
+    comment: This integration does not poll.
+  brands: todo
+  common-modules: done
+  config-flow: done
+  config-flow-test-coverage: todo
+  dependency-transparency: done
+  docs-high-level-description: todo
+  entity-event-setup: done
+  entity-unique-id: done
+  has-entity-name: done
+  runtime-data:
+    status: exempt
+    comment: This integration does not store runtime data.
+  test-before-configure: done
+  test-before-setup:
+    status: exempt
+    comment: Commands are proxied through an existing infrared entity.
+  unique-config-entry: done
+  config-entry-unloading: done
+  entity-unavailable: done
+  log-when-unavailable: done
+  parallel-updates: done
+  reauthentication-flow:
+    status: exempt
+    comment: This integration does not require authentication.
+  devices: done
+  diagnostics: todo
+  discovery:
+    status: exempt
+    comment: Configured manually via config flow.
+  entity-device-class: done
+  entity-translations: done

@@ -1,0 +1,6 @@
+{
+  "name": "BenQ Infrared",
+  "domains": ["benq_infrared"],
+  "content_in_root": false,
+  "render_readme": true
+}

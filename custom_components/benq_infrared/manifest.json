@@ -1,0 +1,13 @@
+{
+  "domain": "benq_infrared",
+  "name": "BenQ Infrared",
+  "codeowners": ["@johannrichard"],
+  "config_flow": true,
+  "dependencies": ["infrared"],
+  "documentation": "https://github.com/johannrichard/hacs-benq-infrared#readme",
+  "issue_tracker": "https://github.com/johannrichard/hacs-benq-infrared/issues",
+  "integration_type": "device",
+  "iot_class": "assumed_state",
+  "requirements": ["infrared-protocols>=5.3.0"],
+  "version": "0.3.0"
+}

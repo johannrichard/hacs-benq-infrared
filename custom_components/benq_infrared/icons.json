@@ -1,0 +1,26 @@
+{
+  "entity": {
+    "button": {
+      "power_on":     { "default": "mdi:power-on" },
+      "power_off":    { "default": "mdi:power-off" },
+      "power_toggle": { "default": "mdi:power" },
+      "menu":         { "default": "mdi:menu" },
+      "up":           { "default": "mdi:arrow-up" },
+      "down":         { "default": "mdi:arrow-down" },
+      "left":         { "default": "mdi:arrow-left" },
+      "right":        { "default": "mdi:arrow-right" },
+      "ok":           { "default": "mdi:check" },
+      "hdmi_1":       { "default": "mdi:video-input-hdmi" },
+      "hdmi_2":       { "default": "mdi:video-input-hdmi" },
+      "vga":          { "default": "mdi:monitor" },
+      "component":    { "default": "mdi:cable-data" },
+      "video":        { "default": "mdi:video" },
+      "auto":         { "default": "mdi:auto-fix" },
+      "eco_blank":    { "default": "mdi:projector-off" },
+      "aspect_ratio": { "default": "mdi:aspect-ratio" },
+      "mute":         { "default": "mdi:volume-mute" },
+      "volume_up":    { "default": "mdi:volume-plus" },
+      "volume_down":  { "default": "mdi:volume-minus" }
+    }
+  }
+}
