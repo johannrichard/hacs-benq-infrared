@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import asyncio
 import logging
 
 from homeassistant.components.infrared import async_send_command
@@ -106,3 +107,16 @@ class BenQIrEntity(Entity):
             code.to_command(),   # ← NECCommand object, not a string
             context=self._context,
         )
+
+    async def _send_command_twice(
+        self,
+        code: BenQProjectorCode,
+        delay_seconds: float = 0.5,
+    ) -> None:
+        """Send an IR command twice with a small pause between sends.
+
+        BenQ projectors require this for power-off to consistently enter standby.
+        """
+        await self._send_command(code)
+        await asyncio.sleep(delay_seconds)
+        await self._send_command(code)

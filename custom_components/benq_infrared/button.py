@@ -82,4 +82,8 @@ class BenQIrButton(BenQIrEntity, ButtonEntity):
 
     async def async_press(self) -> None:
         """Press the button — transmit the IR command."""
+        if self.entity_description.command_code is BenQProjectorCode.POWER_OFF:
+            await self._send_command_twice(self.entity_description.command_code)
+            return
+
         await self._send_command(self.entity_description.command_code)

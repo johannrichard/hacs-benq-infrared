@@ -61,7 +61,7 @@ class BenQIrMediaPlayer(BenQIrEntity, MediaPlayerEntity):
 
     async def async_turn_off(self) -> None:
         """Power off the projector."""
-        await self._send_command(BenQProjectorCode.POWER_OFF)
+        await self._send_command_twice(BenQProjectorCode.POWER_OFF)
         self._attr_state = MediaPlayerState.OFF
         self.async_write_ha_state()
 
